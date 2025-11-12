@@ -1,0 +1,125 @@
+.site-header{
+    background-color: #188B94;
+    display: block;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    margin-left: -10px;
+    z-index:100;
+}
+.logo{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    left: 10px;
+    padding: 0px;
+    border: #188B94;
+    border-radius:30px;
+}
+.nav-items{
+    position: relative; 
+    left: 130px;
+    top: 20px;
+    display: inline-block;
+    border: 1px solid #38B4BD;
+    border-radius: 5px;
+    padding: 2px;
+    color: black;
+    background-color: #F8C687;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+}
+header a:hover{
+    background-color: #cba270;
+    color: white;
+    border-radius: 5px;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    border: 1px solid #38B4BD;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #FAF4EB;
+}
+
+.btn{
+    background-color: #188B94;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FAF4EB;
+}
+
+h1{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+    color: #188B94;
+}
+h2{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    padding: 8px;
+    font-weight: bolder;
+    color: #188B94; 
+}
+.feature-item{
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 28%; 
+    
+}
+
+p{
+    line-height: 1.6;
+    display: inline-block;
+    margin-left: 10px;
+}
+.hero {
+  background: url('./assets/images/hero.jpg') center/cover no-repeat;
+  color:black;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  padding: 80px 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+article img {
+  width: 80%;
+
+  
+}
+
+.destinations{
+    margin-left: 100px;
+}
+
+footer{
+    background-color: #188B94;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding : 10px;
+}
