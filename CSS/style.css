@@ -106,11 +106,38 @@ a { text-decoration: none; }
     color: black;
     text-shadow: 0 2px 6px rgba(0,0,0,0.5);
     border-radius: 0 0 30px 30px;
+    position: relative;
 }
 
 .hero .btn {
     margin-top: 20px;
 }
+.hero h1 {
+    font-size: 58px;
+    font-weight: 900;
+    color: #957925;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+    letter-spacing: 1px;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.25); /* שכבה כהה עדינה */
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
 
 /* ---------------- BUTTON ---------------- */
 
@@ -561,6 +588,45 @@ footer {
     height: 200px;
     border-radius: 12px;
     object-fit: cover;
+}
+/* ============================================
+   HOME PAGE – MERGED HERO HEADER FIX
+   ============================================ */
+
+/* ===========================
+   HOME PAGE HEADER IMPROVED
+   =========================== */
+
+.home-page .site-header {
+    padding: 22px 50px;               /* הקטנת הגובה */
+    background: #188B94;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* לוגו גדול יותר */
+.home-page .logo {
+    width: 95px;     
+    height: 95px;
+    border-radius: 18px;
+    object-fit: contain;
+}
+
+.home-page .main-nav a {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+.home-page .site-main-title {
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+    margin-left: 30px;      /* דחיפה שמאלה מהלוגו */
+    flex-grow: 1;           /* מרווח גמיש בין הלוגו לתפריט */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 
