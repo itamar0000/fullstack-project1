@@ -307,4 +307,142 @@ footer {
     border-radius: 10px;
     object-fit: cover;
 }
+/* ================= ABOUT PAGE ================= */
+
+.about-page {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Hero title area */
+.about-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.about-hero h1 {
+    font-size: 32px;
+    color: #188B94;
+    margin-bottom: 10px;
+}
+
+/* Content section */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Cards */
+.about-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
+    color: #188B94;
+    margin-bottom: 15px;
+}
+
+.about-card ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Images in card */
+.about-image-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-image-box img {
+    width: 100%;
+    border-radius: 12px;
+    height: 180px;
+    object-fit: cover;
+}
+/* ================= CONTACT PAGE ================= */
+
+.contact-page {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    color: #188B94;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Grid layout */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Contact card */
+.contact-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-card h2 {
+    color: #188B94;
+    margin-bottom: 15px;
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #188B94;
+    box-shadow: 0 0 4px rgba(24,139,148,0.3);
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Map placeholder */
+.map-box img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
 
