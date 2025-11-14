@@ -1,4 +1,6 @@
-/* ---------------- GLOBAL ---------------- */
+/* ========================
+   GLOBAL
+======================== */
 
 * {
     margin: 0;
@@ -13,9 +15,14 @@ html, body {
     min-height: 100%;
 }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
-/* ================= HEADER ================= */
+
+/* ========================
+   HEADER
+======================== */
 
 .site-header {
     width: 100%;
@@ -30,7 +37,6 @@ a { text-decoration: none; }
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* ----- LOGO + TEXT ----- */
 .logo-box {
     display: flex;
     align-items: center;
@@ -51,7 +57,6 @@ a { text-decoration: none; }
     letter-spacing: 0.5px;
 }
 
-/* ----- NAV ----- */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -67,7 +72,6 @@ a { text-decoration: none; }
     transition: 0.3s ease;
 }
 
-/* highlight line effect */
 .main-nav a::after {
     content: "";
     position: absolute;
@@ -85,19 +89,18 @@ a { text-decoration: none; }
     width: 100%;
 }
 
-/* hover color */
 .main-nav a:hover {
     color: #F8C687;
 }
 
-/* active link color */
 .main-nav a.active {
     color: #F8C687;
 }
 
 
-
-/* ---------------- HERO ---------------- */
+/* ========================
+   HERO
+======================== */
 
 .hero {
     background: url('../Media/eiffel-tower.png') center/cover no-repeat;
@@ -109,9 +112,6 @@ a { text-decoration: none; }
     position: relative;
 }
 
-.hero .btn {
-    margin-top: 20px;
-}
 .hero h1 {
     font-size: 58px;
     font-weight: 900;
@@ -119,6 +119,7 @@ a { text-decoration: none; }
     text-shadow: 0 4px 18px rgba(0,0,0,0.45);
     letter-spacing: 1px;
 }
+
 .hero::before {
     content: "";
     position: absolute;
@@ -126,7 +127,7 @@ a { text-decoration: none; }
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.25); /* שכבה כהה עדינה */
+    background: rgba(0,0,0,0.25);
     z-index: 1;
     border-radius: inherit;
 }
@@ -136,10 +137,14 @@ a { text-decoration: none; }
     z-index: 2;
 }
 
+.hero .btn {
+    margin-top: 20px;
+}
 
 
-
-/* ---------------- BUTTON ---------------- */
+/* ========================
+   BUTTONS
+======================== */
 
 .btn {
     background: #188B94;
@@ -156,7 +161,10 @@ a { text-decoration: none; }
     transform: translateY(-2px);
 }
 
-/* ================= LAYOUT ================= */
+
+/* ========================
+   LAYOUT
+======================== */
 
 .layout {
     display: grid;
@@ -166,6 +174,27 @@ a { text-decoration: none; }
     margin: 40px auto;
     align-items: start;
 }
+
+main {
+    flex: 3;
+}
+
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    main,
+    .sidebar {
+        width: 100%;
+        flex: none;
+    }
+}
+
+
+/* ========================
+   SIDEBAR
+======================== */
 
 .sidebar {
     background: white;
@@ -184,26 +213,26 @@ a { text-decoration: none; }
     box-shadow: 0 16px 40px rgba(0,0,0,0.18);
 }
 
-/* MAIN takes ~75% */
-main {
-    flex: 3;
-}
-
-/* SIDEBAR takes ~25% */
 .sidebar {
-    background: white;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 120px;
-    height: fit-content;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    flex: none;
+    height: auto;
+    align-self: flex-start;
+    width: 280px;
     border-left: 4px solid #188B94;
 }
 
 .sidebar h3 {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    font-size: 20px;
     color: #188B94;
+}
+
+.sidebar ul {
+    margin-left: 20px;
+    line-height: 1.8;
 }
 
 .sidebar ul {
@@ -211,52 +240,10 @@ main {
     padding-left: 20px;
 }
 
-@media (max-width: 900px) {
-    .layout {
-        flex-direction: column;
-    }
 
-    main, .sidebar {
-        width: 100%;
-        flex: none;
-    }
-}
-/* ================= SITE TITLE BAR ================= */
-
-.site-title-bar {
-    width: 100%;
-    background: white;
-    padding: 25px 0;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-
-.site-main-title {
-    font-size: 55px;
-    font-weight: 900;
-    background: linear-gradient(90deg, #188B94, #32b6c4);
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: 2px;
-    animation: titleFade 1.2s ease-out forwards;
-    opacity: 0;
-}
-
-/* אנימציה */
-@keyframes titleFade {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/* ================= VIDEO SECTION ================= */
+/* ========================
+   VIDEO SECTION
+======================== */
 
 .video-section {
     background: white;
@@ -273,9 +260,6 @@ main {
     max-height: 450px;
     object-fit: cover;
 }
-/* =========================================================
-   VIDEO (INSIDE SIDEBAR)
-========================================================= */
 
 .sidebar-video {
     margin-top: 25px;
@@ -286,39 +270,16 @@ main {
 
 .sidebar-video .travel-video {
     width: 100%;
-    height: 380px;   /* <<< גודל וידאו גדול */
+    height: 380px;
     border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0,0,0,0.20);
 }
 
 
-
-/* ---------------- SIDEBAR ---------------- */
-
-.sidebar {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    flex: none;               /* לא יתפוס את כל הגובה */
-    height: auto;             /* רק לפי התוכן */
-    align-self: flex-start;   /* עולה למעלה */
-    width: 280px;
-}
-
-.sidebar h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #188B94;
-}
-
-.sidebar ul {
-    margin-left: 20px;
-    line-height: 1.8;
-}
-
-/* ---------------- CONTAINERS ---------------- */
+/* ========================
+   CONTAINERS
+======================== */
 
 .container {
     background: white;
@@ -332,7 +293,11 @@ h1, h2, h3 {
     color: #188B94;
     margin-bottom: 15px;
 }
-/* ================= FEATURES SECTION ================= */
+
+
+/* ========================
+   FEATURES
+======================== */
 
 .features {
     margin: 40px 0;
@@ -377,7 +342,10 @@ h1, h2, h3 {
     font-size: 16px;
 }
 
-/* ---------------- DESTINATIONS GRID ---------------- */
+
+/* ========================
+   DESTINATIONS
+======================== */
 
 .grid {
     display: grid;
@@ -407,7 +375,10 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-/* ---------------- IMAGE GRID ---------------- */
+
+/* ========================
+   IMAGE GRID
+======================== */
 
 .image-grid {
     display: grid;
@@ -423,7 +394,10 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-/* ---------------- FOOTER ---------------- */
+
+/* ========================
+   FOOTER
+======================== */
 
 footer {
     background: #188B94;
@@ -434,7 +408,10 @@ footer {
     border-radius: 25px 25px 0 0;
 }
 
-/* ================ DESTINATIONS PAGE ================ */
+
+/* ========================
+   DESTINATIONS PAGE
+======================== */
 
 .destinations-page {
     width: 90%;
@@ -447,7 +424,6 @@ footer {
     color: #188B94;
 }
 
-/* DESTINATION CARD */
 .destination-card {
     background: white;
     padding: 25px;
@@ -472,7 +448,6 @@ footer {
     margin-bottom: 15px;
 }
 
-/* IMAGES GRID FOR DESTINATIONS */
 .destination-images {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -485,14 +460,17 @@ footer {
     border-radius: 10px;
     object-fit: cover;
 }
-/* ================= ABOUT PAGE ================= */
+
+
+/* ========================
+   ABOUT PAGE
+======================== */
 
 .about-page {
     width: 90%;
     margin: 30px auto;
 }
 
-/* Hero title area */
 .about-hero {
     text-align: center;
     padding: 40px 20px;
@@ -508,14 +486,12 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Content section */
 .about-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
-/* Cards */
 .about-card {
     background: white;
     padding: 25px;
@@ -533,7 +509,6 @@ footer {
     line-height: 1.8;
 }
 
-/* Images in card */
 .about-image-box {
     display: flex;
     flex-direction: column;
@@ -546,7 +521,11 @@ footer {
     height: 180px;
     object-fit: cover;
 }
-/* ================= CONTACT PAGE ================= */
+
+
+/* ========================
+   CONTACT PAGE
+======================== */
 
 .contact-page {
     width: 90%;
@@ -567,14 +546,12 @@ footer {
     color: #555;
 }
 
-/* Grid layout */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
 }
 
-/* Contact card */
 .contact-card {
     background: white;
     padding: 25px;
@@ -587,7 +564,6 @@ footer {
     margin-bottom: 15px;
 }
 
-/* Form styling */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -615,32 +591,28 @@ footer {
     margin-top: 10px;
 }
 
-/* Map placeholder */
 .map-box img {
     width: 100%;
     height: 200px;
     border-radius: 12px;
     object-fit: cover;
 }
-/* ============================================
-   HOME PAGE – MERGED HERO HEADER FIX
-   ============================================ */
 
-/* ===========================
-   HOME PAGE HEADER IMPROVED
-   =========================== */
+
+/* ========================
+   HOME PAGE HEADER
+======================== */
 
 .home-page .site-header {
-    padding: 22px 50px;               /* הקטנת הגובה */
+    padding: 22px 50px;
     background: #188B94;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* לוגו גדול יותר */
 .home-page .logo {
-    width: 95px;     
+    width: 95px;
     height: 95px;
     border-radius: 18px;
     object-fit: contain;
@@ -651,15 +623,12 @@ footer {
     font-weight: 600;
 }
 
-
 .home-page .site-main-title {
     font-size: 60px;
     font-weight: 900;
     color: white;
     margin: 0;
-    margin-left: 30px;      /* דחיפה שמאלה מהלוגו */
-    flex-grow: 1;           /* מרווח גמיש בין הלוגו לתפריט */
+    margin-left: 30px;
+    flex-grow: 1;
     text-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
-
-
