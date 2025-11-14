@@ -4,65 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>travel guide</title>
+    <title>Travel Guide – Destinations</title>
 </head>
 <body>
+
+    <!-- UNIFIED HEADER (same as index.html) -->
     <header class="site-header">
-        <div>
-            <a href="index.html"><img class="logo" src="../Media/logo.png" alt="logo"></a>
-            <nav class="main-nav">
-                <ul>
-                    <li class="nav-items"><a href="index.html">Home</a></li>    
-                    <li class="nav-items"><a href="destinations.html">Destinations</a></li>
-                    <li class="nav-items"><a href="about.html">About</a></li>
-                    <li class="nav-items"><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+
+        <a href="index.html" class="logo-box">
+            <img class="logo" src="../Media/logo.png" alt="logo">
+            <span class="brand">TravelGuide</span>
+        </a>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <main>
-        <section class="destinations">
-            <h2>Popular Destinations</h2>
+    <main class="destinations-page">
 
-            <div class="container">
-                <article>
-                    <h3 id="Paris">Paris</h3>
-                    <p>The City of Light awaits you!</p>
+        <h2 class="page-title">Popular Destinations</h2>
 
-                    <p>
-                        Known as “The City of Light”, Paris is one of the most visited and romantic destinations...
-                    </p>
+        <!-- DESTINATION CARD -->
+        <div class="destination-card">
+            <h3 id="Paris">Paris</h3>
+            <p class="subtitle">The City of Light awaits you!</p>
+            <p class="description">
+                Known as “The City of Light”, Paris is one of the most visited and romantic destinations.
+            </p>
 
-                    <div class="image-grid">
-                        <img src="../Media/eiffel-tower.png" alt="Paris">
-                        <img src="../Media/eiffel-tower.png" alt="Paris">
-                        <img src="../Media/eiffel-tower.png" alt="Paris">
-                    </div>
-                </article>
+            <div class="destination-images">
+                <img src="../Media/eiffel-tower.png" alt="Paris">
+                <img src="../Media/eiffel-tower.png" alt="Paris">
+                <img src="../Media/eiffel-tower.png" alt="Paris">
             </div>
+        </div>
 
-            <div class="container">
-                <article>
-                    <h3 id="Rome">Rome</h3>
+        <!-- DESTINATION CARD -->
+        <div class="destination-card">
+            <h3 id="Rome">Rome</h3>
+            <p class="description">
+                Rome, the capital of Italy, is a city rich in history, culture, and timeless beauty.
+            </p>
 
-                    <p>
-                        Rome, the capital of Italy, is a city rich in history, culture, and timeless beauty...
-                    </p>
-
-                    <div class="image-grid">
-                        <img class="colluseom" src="../Media/colluseom.png" alt="Rome">
-                        <img class="colluseom" src="../Media/colluseom.png" alt="Rome">
-                        <img class="colluseom" src="../Media/colluseom.png" alt="Rome">
-                    </div>
-                </article>
+            <div class="destination-images">
+                <img src="../Media/colluseom.png" alt="Rome">
+                <img src="../Media/colluseom.png" alt="Rome">
+                <img src="../Media/colluseom.png" alt="Rome">
             </div>
+        </div>
 
-        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Travel Guide. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
