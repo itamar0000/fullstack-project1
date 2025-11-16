@@ -108,7 +108,7 @@ a {
     text-align: center;
     color: black;
     text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 30px 30px;   
     position: relative;
 }
 
@@ -167,13 +167,13 @@ a {
 ======================== */
 
 .layout {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: 40px;
+    display: flex;
     width: 92%;
     margin: 40px auto;
-    align-items: start;
+    align-items: flex-start;
+    gap: 40px;
 }
+
 
 main {
     flex: 3;
