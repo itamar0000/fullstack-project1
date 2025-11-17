@@ -455,6 +455,7 @@ footer {
 
 .destination-images {
     display: flex;
+    
     gap: 15px;
 }
 
@@ -595,7 +596,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    max-height: 400px;
 }
 .map-box img {
     max-width: 100%;
@@ -615,8 +616,6 @@ footer {
     padding: 22px 50px;
     background: #188B94;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .home-page .logo {
@@ -637,6 +636,6 @@ footer {
     color: white;
     margin: 0;
     margin-left: 30px;
-    flex-grow: 1;
     text-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    flex-grow: 1;
 }
