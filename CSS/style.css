@@ -1,11 +1,10 @@
 /* ========================
-   GLOBAL STUFF
+   GLOBAL STUFF (Resets & Body)
 ======================== */
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* width will be counted for all the CSS box and not only the content */
+    box-sizing: border-box;
 }
 
 html, body {
@@ -13,25 +12,24 @@ html, body {
     background: #f8f9fb;
     color: #333;
 }
-body{
-    display: flex; /* now we can arrange as a column! */
-    flex-direction: column; /* organize children of body one under the second */
-    min-height: 100vh; /* extend for all the page for the footer to be stucked in the buttom */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
-    text-decoration: none; /* all links not blue and without underline */
+    text-decoration: none;
 }
 
-
 /* ========================
-   HEADER
+   HEADER (Default)
 ======================== */
-
 .site-header {
-    width: 100%;  /* takes the whole width of the page */
+    width: 100%;
     background: #188B94;
-    padding: 12px 40px;  
+    padding: 12px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,7 +74,6 @@ a {
     transition: 0.3s ease;
 }
 
-/* cool underline effect i found */
 .main-nav a::after {
     content: "";
     position: absolute;
@@ -94,64 +91,14 @@ a {
     width: 100%;
 }
 
-.main-nav a:hover {
-    color: #F8C687;
-}
-
+.main-nav a:hover,
 .main-nav a.active {
     color: #F8C687;
 }
 
-
-/* ========================
-   HERO SECTION
-======================== */
-
-.hero {
-    background: url('../Media/eiffel-tower.png') center/cover no-repeat;
-    padding: 120px 40px;
-    text-align: center;
-    color: black;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    border-radius: 0 0 30px 30px;   
-    position: relative;
-}
-
-.hero h1 {
-    font-size: 58px;
-    font-weight: 900;
-    color: #957925;
-    text-shadow: 0 4px 18px rgba(0,0,0,0.45);
-    letter-spacing: 1px;
-}
-
-/* dark overlay so text is readable */
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 1;
-    border-radius: inherit;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 2;
-}
-
-.hero .btn {
-    margin-top: 20px;
-}
-
-
 /* ========================
    BUTTONS
 ======================== */
-
 .btn {
     background: #188B94;
     padding: 12px 28px;
@@ -167,11 +114,9 @@ a {
     transform: translateY(-2px);
 }
 
-
 /* ========================
-   MAIN LAYOUT
+   MAIN LAYOUT & CONTAINERS
 ======================== */
-
 .layout {
     display: flex;
     width: 92%;
@@ -180,12 +125,24 @@ a {
     gap: 40px;
 }
 
-
 main {
     flex: 3;
 }
 
-/* mobile responsive */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
+}
+
+h1, h2, h3 {
+    color: #188B94;
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsive Layout */
 @media (max-width: 900px) {
     .layout {
         flex-direction: column;
@@ -198,37 +155,28 @@ main {
     }
 }
 
-
 /* ========================
    SIDEBAR
 ======================== */
-
 .sidebar {
     background: white;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    padding: 25px; /* Updated overlap from original CSS */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 100px;
-    height: fit-content;
+    height: auto;
+    align-self: flex-start;
+    width: 280px;
+    border-left: 4px solid #188B94;
     transform: translateY(-20px);
     transition: box-shadow 0.3s, transform 0.3s;
+    flex: none;
 }
 
 .sidebar:hover {
     transform: translateY(-26px);
     box-shadow: 0 16px 40px rgba(0,0,0,0.18);
-}
-
-.sidebar {
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    flex: none;
-    height: auto;
-    align-self: flex-start;
-    width: 280px;
-    border-left: 4px solid #188B94;
 }
 
 .sidebar h3 {
@@ -238,20 +186,14 @@ main {
 }
 
 .sidebar ul {
-    margin-left: 20px;
+    margin-bottom: 25px;
+    padding-left: 20px;
     line-height: 1.8;
 }
 
-.sidebar ul {
-    margin-bottom: 25px;
-    padding-left: 20px;
-}
-
-
 /* ========================
-   VIDEO STUFF
+   VIDEO ELEMENTS
 ======================== */
-
 .video-section {
     background: white;
     padding: 25px;
@@ -283,76 +225,9 @@ main {
     box-shadow: 0 4px 15px rgba(0,0,0,0.20);
 }
 
-
 /* ========================
-   CONTAINERS
+   GENERAL GRID HELPERS
 ======================== */
-
-.container {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.09);
-}
-
-h1, h2, h3 {
-    color: #188B94;
-    margin-bottom: 15px;
-}
-
-
-/* ========================
-   FEATURES SECTION
-======================== */
-
-.features {
-    margin: 40px 0;
-}
-
-.feature-title {
-    text-align: center;
-    color: #188B94;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.features-grid {
-    display: flex;
-    gap: 5px;;
-}
-
-.feature-card {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
-}
-
-.feature-card h3 {
-    color: #188B94;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    color: #444;
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-
-/* ========================
-   DESTINATIONS
-======================== */
-
 .grid {
     display: flex;
     gap: 25px;
@@ -380,11 +255,6 @@ h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-
-/* ========================
-   IMAGE GRID
-======================== */
-
 .image-grid {
     display: flex;
     gap: 10px;
@@ -398,279 +268,13 @@ h1, h2, h3 {
     object-fit: cover;
 }
 
-
 /* ========================
    FOOTER
 ======================== */
-
 footer {
     background: #188B94;
     padding: 20px;
     text-align: center;
     color: white;
     margin-top: auto;
-
-    }
-
-
-/* ========================
-   DESTINATIONS PAGE
-======================== */
-
-.destinations-page {
-    width: 90%;
-    margin: 30px auto;
-}
-
-.page-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #188B94;
-}
-
-.destination-card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 35px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.destination-card h3 {
-    color: #188B94;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-weight: bold;
-    color: #444;
-    margin-bottom: 10px;
-}
-
-.description {
-    margin-bottom: 15px;
-}
-
-.destination-images {
-    display: flex;
-    
-    gap: 15px;
-}
-
-.destination-images img {
-    width: 100%;
-    height: 180px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-
-/* ========================
-   ABOUT PAGE
-======================== */ 
-
-.about-page {
-    width: 90%;
-    margin: 30px auto;
-}
-
-.about-hero {
-    text-align: center;
-    padding: 40px 20px;
-    background: white;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.about-hero h1 {
-    font-size: 32px;
-    color: #188B94;
-    margin-bottom: 10px;
-}
-
-.about-content {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;}
-
-.about-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    flex: 1;
-}
-
-.about-card h2 {
-    color: #188B94;
-    margin-bottom: 15px;
-}
-
-.about-card ul {
-    margin-left: 20px;
-    line-height: 1.8;
-}
-
-
-
-.about-image-box img {
-    width: 100%;
-    border-radius: 12px;
-    height: 180px;
-    object-fit: cover;
-}
-/* ========================
-   ABOUT PAGE — MAP SECTION
-======================== */
-
-.about-map-section {
-    margin: 50px auto;
-    max-width: 900px;
-    text-align: center;
-    padding: 20px;
-}
-
-.about-map-section h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #188B94;
-}
-
-.about-map-section p {
-    margin-bottom: 20px;
-    color: #555;
-    font-size: 1.1rem;
-}
-
-.map-container {
-    width: 100%;
-    height: 350px;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-
-/* ========================
-   CONTACT PAGE
-======================== */
-
-.contact-page {
-    width: 90%;
-    margin: 30px auto;
-}
-
-.contact-title {
-    text-align: center;
-    font-size: 32px;
-    color: #188B94;
-    margin-bottom: 10px;
-}
-
-.contact-subtitle {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 18px;
-    color: #555;
-}
-
-.contact-grid {
-    display: flex;
-    gap: 25px;
-}
-
-.contact-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    flex: 1;
-}
-
-.contact-card h2 {
-    color: #188B94;
-    margin-bottom: 15px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    resize: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #188B94;
-    box-shadow: 0 0 4px rgba(24,139,148,0.3);
-}
-
-.contact-btn {
-    width: 100%;
-    margin-top: 10px;
-
-}
-.map-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 400px;
-}
-.map-box img {
-    max-width: 100%;
-    border-radius: 12px;
-    max-height:400px;
-    object-fit:scale-down;
-    border: 1px solid #ccc;
-
-}
-
-
-/* ========================
-   HOME PAGE HEADER
-======================== */
-
-.home-page .site-header {
-    padding: 22px 50px;
-    background: #188B94;
-    display: flex;
-}
-
-.home-page .logo {
-    width: 95px;
-    height: 95px;
-    border-radius: 18px;
-    object-fit: contain;
-}
-
-.home-page .main-nav a {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.home-page .site-main-title {
-    font-size: 60px;
-    font-weight: 900;
-    color: white;
-    margin: 0;
-    margin-left: 30px;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    flex-grow: 1;
 }
