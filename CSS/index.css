@@ -121,3 +121,108 @@
     text-shadow: 0 4px 10px rgba(0,0,0,0.25);
     flex-grow: 1;
 }
+/* ========================
+   RESPONSIVE HEADER FIXES
+======================== */
+
+/* for medium size: */
+
+
+/* שלב 1: מסכים בינוניים (טאבלטים ולפטופים קטנים) - הקטנת אלמנטים */
+@media (max-width: 1024px) {
+    .home-page .site-header {
+        padding: 15px 20px; /* הקטנת ה-Padding בצדדים */
+    }
+
+    .home-page .site-main-title {
+        font-size: 40px; /* הקטנת הכותרת */
+        margin-left: 15px;
+    }
+
+    .home-page .main-nav a {
+        font-size: 18px; /* הקטנת הקישורים */
+    }
+    
+    .home-page .logo {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+/* ========================
+   RESPONSIVE BODY & CARDS
+======================== */
+
+@media (max-width: 900px) {
+    
+    .layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ה-Main עדיין תופס הכל */
+    main {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* התיקון ל-Sidebar */
+    aside.sidebar {
+        width: 100%;          /* תנסה לתפוס הכל... */
+        max-width: 400px;     /* ...אבל אל תעבור את ה-400 פיקסלים */
+        margin: 40px auto 0 auto; /* ה-auto באמצע דואג למרכז אותו */
+        
+        /* אופציונלי: מסגרת עדינה כדי להדגיש אותו כ"כרטיס" נפרד */
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* מוודא שהוידאו לא חורג מהרוחב החדש */
+    .sidebar video {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* התאמות למובייל (מתחת ל-768px) - שבירת הכרטיסים */
+@media (max-width: 768px) {
+
+    /* 2. הפיכת אזור הפיצ'רים לטור (Stack) */
+    .features-grid {
+        flex-direction: column;
+        gap: 20px; /* מרווח בין הכרטיסים כשהם אחד מעל השני */
+    }
+
+    /* 3. הפיכת הגריד של היעדים לטור אחד */
+    .grid {
+        display: grid; /* מוודא שזה נשאר גריד */
+        grid-template-columns: 1fr; /* עמודה אחת שתופסת את כל המקום */
+        gap: 30px;
+    }
+
+    /* התאמת התמונות בתוך היעדים */
+    .grid article img {
+        width: 100%; /* מוודא שהתמונה לא חורגת מהמסך */
+        height: auto; /* שומר על פרופורציות */
+        border-radius: 10px;
+    }
+
+    /* יישור טקסטים שיהיה נוח לקרוא במובייל */
+    .feature-card, .grid article {
+        text-align: center;
+    }
+    
+    /* הקטנת הכותרת הענקית של ה-Hero למובייל */
+    .hero h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    
+    .hero .container p {
+        font-size: 18px;
+    }
+}
