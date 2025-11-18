@@ -82,3 +82,60 @@
     height: 100%;
     border: 0;
 }
+/* ========================
+   ABOUT PAGE RESPONSIVE
+======================== */
+
+/* --- שלב ביניים: טאבלטים (עד 1024px) --- */
+@media (max-width: 1024px) {
+    
+    .about-page {
+        width: 95%; /* ניצול טוב יותר של רוחב המסך */
+    }
+
+    .about-hero h1 {
+        font-size: 28px; /* הקטנת כותרת ראשית */
+    }
+
+    .about-card {
+        padding: 20px; /* הקטנת מרווחים פנימיים */
+    }
+
+    /* אם יש תמונות בתוך הכרטיסים, נקטין אותן מעט */
+    .about-image-box img {
+        height: 150px;
+    }
+}
+
+/* --- שלב קטן: מובייל (עד 768px) --- */
+@media (max-width: 768px) {
+
+    /* 1. סידור הכרטיסים בטור */
+    .about-content {
+        flex-direction: column; /* הופך את ה-Flex לטור אנכי */
+        gap: 20px; /* רווח נוח בין הכרטיסים */
+    }
+
+    /* 2. התאמת כותרות */
+    .about-hero {
+        padding: 30px 15px; /* פחות ריפוד בקופסה הראשית */
+    }
+    
+    .about-hero h1 {
+        font-size: 26px;
+    }
+
+    /* 3. טיפול במפה במובייל */
+    .about-map-section {
+        margin: 30px auto; /* פחות מרווח חיצוני */
+        padding: 10px;
+    }
+
+    .map-container {
+        height: 250px; /* מקטינים את גובה המפה כדי שלא "תשתלט" על הגלילה */
+    }
+
+    .about-map-section h2 {
+        font-size: 1.5rem;
+    }
+}
