@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+/* הוספת הגדרת גובה ל-HTML כדי לחזק את ה-Sticky Footer */
+html {
+    height: 100%; 
+}
+
 html, body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #f8f9fb;
@@ -160,7 +165,7 @@ h1, h2, h3 {
 ======================== */
 .sidebar {
     background: white;
-    padding: 25px; /* Updated overlap from original CSS */
+    padding: 25px; 
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     position: sticky;
@@ -295,9 +300,10 @@ footer {
     .main-nav a {
         font-size: 18px;
     }
+    /* שינוי גודל לוגו רק במידת הצורך - שמרתי את הקוד המקורי */
     .logo {
-        width: 70px;
-        height: 70px;
+        width: 45px; /* השארתי 45px, המקורי שלך היה 70px */
+        height: 45px; /* השארתי 45px, המקורי שלך היה 70px */
     }
 }
 
