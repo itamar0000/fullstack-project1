@@ -7,7 +7,7 @@
     text-align: center;
     color: black;
     text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-    border-radius: 0 0 30px 30px;   
+    border-radius: 0 0 30px 30px;  
     position: relative;
 }
 
@@ -125,9 +125,6 @@
    RESPONSIVE HEADER FIXES
 ======================== */
 
-/* for medium size: */
-
-
 /* שלב 1: מסכים בינוניים (טאבלטים ולפטופים קטנים) - הקטנת אלמנטים */
 @media (max-width: 1024px) {
     .home-page .site-header {
@@ -169,9 +166,9 @@
 
     /* התיקון ל-Sidebar */
     aside.sidebar {
-        width: 100%;          /* תנסה לתפוס הכל... */
-        max-width: 400px;     /* ...אבל אל תעבור את ה-400 פיקסלים */
-        margin: 40px auto 0 auto; /* ה-auto באמצע דואג למרכז אותו */
+        width: 100%; 
+        max-width: 400px; 
+        margin: 40px auto 0 auto; 
         
         /* אופציונלי: מסגרת עדינה כדי להדגיש אותו כ"כרטיס" נפרד */
         background-color: #f9f9f9;
@@ -199,8 +196,8 @@
 
     /* 3. הפיכת הגריד של היעדים לטור אחד */
     .grid {
-        display: grid; /* מוודא שזה נשאר גריד */
-        grid-template-columns: 1fr; /* עמודה אחת שתופסת את כל המקום */
+        display: flex; /* **שינוי:** שימוש ב-Flexbox במקום Grid */
+        flex-direction: column; /* **שינוי:** העמדת הפריטים אחד מתחת לשני */
         gap: 30px;
     }
 

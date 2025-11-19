@@ -231,15 +231,20 @@ h1, h2, h3 {
 }
 
 /* ========================
-   GENERAL GRID HELPERS
+   GENERAL GRID HELPERS (הגדרות Flexbox רספונסיביות)
 ======================== */
 .grid {
     display: flex;
+    flex-wrap: wrap; /* מאפשר לקלפים לרדת שורה */
     gap: 25px;
     margin-top: 15px;
+    justify-content: space-between; /* או space-around, לפי העדפתך */
 }
 
 .grid article {
+    /* הגדרת גודל מינימלי לקלף. כשהרוחב לא יאפשר 3 קלפים כאלה, הם ירדו שורה */
+    flex: 1 1 300px; 
+    
     background: white;
     padding: 15px;
     border-radius: 12px;
@@ -300,10 +305,9 @@ footer {
     .main-nav a {
         font-size: 18px;
     }
-    /* שינוי גודל לוגו רק במידת הצורך - שמרתי את הקוד המקורי */
     .logo {
-        width: 45px; /* השארתי 45px, המקורי שלך היה 70px */
-        height: 45px; /* השארתי 45px, המקורי שלך היה 70px */
+        width: 45px; 
+        height: 45px; 
     }
 }
 
