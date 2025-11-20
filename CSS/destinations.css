@@ -44,6 +44,23 @@
     border-radius: 10px;
     object-fit: cover;
 }
+.destinations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color:beige;
+}
+.destinations-table th, .destinations-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+td:nth-child(1) {
+    font-weight: bold;
+}
+
+
 /* ========================
    DESTINATIONS PAGE RESPONSIVE
 ======================== */
@@ -93,3 +110,4 @@
         text-align: center; /* ממרכז את הטקסט במובייל */
     }
 }
+
