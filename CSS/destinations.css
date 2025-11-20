@@ -44,6 +44,11 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+/* ========================
+   DESTINATIONS TABLE
+======================== */
+
 .destinations-table {
     width: 100%;
     border-collapse: collapse;
@@ -65,30 +70,26 @@ td:nth-child(1) {
    DESTINATIONS PAGE RESPONSIVE
 ======================== */
 
-/* --- שלב ביניים: טאבלטים (עד 1024px) --- */
-/* כאן אנחנו רק מקטינים דברים כדי שייכנסו, אבל לא שוברים את השורה */
+
 @media (max-width: 1024px) {
     
     .destinations-page {
-        width: 95%; /* מרווחים קטנים יותר בצדדים */
+        width: 95%; 
     }
 
     .destination-card {
-        padding: 20px; /* פחות "אוויר" בתוך הכרטיס */
+        padding: 20px; 
     }
     
     .destination-card h3 {
-        font-size: 22px; /* כותרת קצת יותר קטנה */
+        font-size: 22px; 
     }
 
-    /* התמונות עדיין בשורה, אבל נמוכות יותר כדי לשמור פרופורציה */
     .destination-images img {
-        height: 140px; /* הקטנו מ-180 ל-140 כדי שלא יראו מרוחות לגובה */
+        height: 140px; 
     }
 }
 
-/* --- שלב קטן: מובייל (עד 768px) --- */
-/* כאן אנחנו שוברים את המבנה לגמרי */
 @media (max-width: 768px) {
     
     .page-title {
@@ -97,17 +98,17 @@ td:nth-child(1) {
     }
 
     .destination-images {
-        flex-direction: column; /* הופך את התמונות לטור */
+        flex-direction: column; 
         gap: 15px;
     }
 
     .destination-images img {
         width: 100%;
-        height: 200px; /* מחזירים גובה מרשים כי התמונה לבד בשורה */
+        height: 200px; 
     }
 
     .destination-card {
-        text-align: center; /* ממרכז את הטקסט במובייל */
+        text-align: center; 
     }
 }
 
