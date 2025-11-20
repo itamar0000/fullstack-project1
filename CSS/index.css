@@ -240,9 +240,7 @@
         gap: 20px; /* between cards */
     }
 
-    /* 3. הפיכת הגריד של היעדים לטור אחד */
     .grid {
-        display: flex; /* **שינוי:** שימוש ב-Flexbox במקום Grid */
         flex-direction: column; /* **שינוי:** העמדת הפריטים אחד מתחת לשני */
         gap: 30px;
     }
@@ -250,13 +248,20 @@
     /* התאמת התמונות בתוך היעדים */
     .grid article img {
         width: 100%; /* מוודא שהתמונה לא חורגת מהמסך */
-        height: auto; /* שומר על פרופורציות */
+        height: 80%; /* שומר על פרופורציות */
+        object-fit: scale-down;
         border-radius: 10px;
     }
 
+    .grid article {
+        align-self: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
     /* יישור טקסטים שיהיה נוח לקרוא במובייל */
     .feature-card, .grid article {
         text-align: center;
+
     }
     
     /* הקטנת הכותרת הענקית של ה-Hero למובייל */

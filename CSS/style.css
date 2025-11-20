@@ -168,7 +168,6 @@ h1, h2, h3 {
     flex-wrap: wrap; /* מאפשר לקלפים לרדת שורה */
     gap: 25px;
     margin-top: 15px;
-    justify-content: space-between; /* או space-around, לפי העדפתך */
 }
 
 .grid article {

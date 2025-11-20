@@ -79,19 +79,18 @@
    CONTACT PAGE RESPONSIVE
 ======================== */
 
-/* --- שלב ביניים: טאבלטים (עד 1024px) --- */
 @media (max-width: 1024px) {
     
     .contact-page {
-        width: 95%; /* מרווח צדדי קטן יותר */
+        width: 95%; 
     }
 
     .contact-grid {
-        gap: 15px; /* הקטנת הרווח בין הטופס למפה */
+        gap: 15px; 
     }
 
     .contact-card {
-        padding: 20px; /* פחות ריפוד פנימי */
+        padding: 20px; 
     }
 
     .contact-title {
@@ -99,31 +98,26 @@
     }
 }
 
-/* --- שלב קטן: מובייל (עד 768px) --- */
 @media (max-width: 768px) {
 
-    /* 1. שבירת המבנה לטור */
     .contact-grid {
-        flex-direction: column; /* הטופס והמפה אחד מעל השני */
-        gap: 30px; /* רווח גדול יותר ביניהם כשהם בטור */
+        flex-direction: column;
+        gap: 30px; 
     }
 
-    /* 2. התאמת הטופס */
     .contact-form input,
     .contact-form textarea {
-        font-size: 16px; /* חשוב! מונע מאייפון לעשות זום אוטומטי כשלוחצים */
+        font-size: 16px; 
     }
 
     .contact-btn {
-        padding: 15px; /* כפתור קצת יותר גדול ללחיצה נוחה באצבע */
+        padding: 15px; 
     }
 
-    /* 3. התאמת המפה/תמונה */
     .map-box {
         display: none;
     }
 
-    /* 4. כותרות */
     .contact-title {   
         font-size: 26px;
     }
